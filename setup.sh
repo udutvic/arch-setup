@@ -30,16 +30,6 @@ git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay && makepkg -si --noconfirm
 cd ~ && rm -rf ~/yay
 
-echo "[6/10] Встановлення NVM та Node.js..."
-yay -S --noconfirm nvm
-echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
-echo '[ -s "/usr/share/nvm/init-nvm.sh" ] && source /usr/share/nvm/init-nvm.sh' >> ~/.bashrc
-source ~/.bashrc
-nvm install --lts
-
-echo "[7/10] Встановлення React Native CLI..."
-npm install -g yarn watchman react-native-cli expo-cli
-
 echo "[8/10] Встановлення Android Studio, VS Code, Java..."
 sudo pacman -S --noconfirm jdk17-openjdk
 yay -S --noconfirm android-studio visual-studio-code-bin
